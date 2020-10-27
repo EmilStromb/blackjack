@@ -7,9 +7,8 @@ namespace BlackJack.model.rules
 {
     class RulesFactory
     {
-        public IHitStrategy GetHitRule()
-        {
-            return new BasicHitStrategy();
+        public IHitStrategy softRule() {
+            return new softRule();
         }
 
         public INewGameStrategy GetNewGameRule()

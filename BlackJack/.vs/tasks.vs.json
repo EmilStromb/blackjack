@@ -5,6 +5,11 @@
       "taskLabel": "task-Soft17",
       "appliesTo": "model/rules/Soft17.cs",
       "type": "launch"
+    },
+    {
+      "taskLabel": "task-soft17",
+      "appliesTo": "model/rules/soft17.cs",
+      "type": "launch"
     }
   ]
 }

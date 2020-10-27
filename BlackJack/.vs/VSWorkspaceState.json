@@ -1,12 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\bin",
-    "\\bin\\Debug",
     "\\model",
-    "\\model\\rules",
-    "\\view"
+    "\\model\\rules"
   ],
-  "SelectedNode": "\\view\\SwedishView.cs",
   "PreviewInSolutionExplorer": false
 }
