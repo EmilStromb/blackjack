@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-Soft17",
+      "appliesTo": "model/rules/Soft17.cs",
+      "type": "launch"
+    }
+  ]
+}

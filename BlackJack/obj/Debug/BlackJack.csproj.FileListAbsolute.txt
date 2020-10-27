@@ -1,0 +1,12 @@
+C:\Users\emil9\1dv607\test\blackjack_csharp-master\BlackJack\bin\Debug\BlackJack.exe
+C:\Users\emil9\1dv607\test\blackjack_csharp-master\BlackJack\bin\Debug\BlackJack.pdb
+C:\Users\emil9\1dv607\test\blackjack_csharp-master\BlackJack\obj\Debug\BlackJack.csprojAssemblyReference.cache
+C:\Users\emil9\1dv607\test\blackjack_csharp-master\BlackJack\obj\Debug\BlackJack.csproj.CoreCompileInputs.cache
+C:\Users\emil9\1dv607\test\blackjack_csharp-master\BlackJack\obj\Debug\BlackJack.exe
+C:\Users\emil9\1dv607\test\blackjack_csharp-master\BlackJack\obj\Debug\BlackJack.pdb
+C:\Users\emil9\source\repos\1dv607\test\blackjack_csharp-master\BlackJack\bin\Debug\BlackJack.exe
+C:\Users\emil9\source\repos\1dv607\test\blackjack_csharp-master\BlackJack\bin\Debug\BlackJack.pdb
+C:\Users\emil9\source\repos\1dv607\test\blackjack_csharp-master\BlackJack\obj\Debug\BlackJack.csprojAssemblyReference.cache
+C:\Users\emil9\source\repos\1dv607\test\blackjack_csharp-master\BlackJack\obj\Debug\BlackJack.csproj.CoreCompileInputs.cache
+C:\Users\emil9\source\repos\1dv607\test\blackjack_csharp-master\BlackJack\obj\Debug\BlackJack.exe
+C:\Users\emil9\source\repos\1dv607\test\blackjack_csharp-master\BlackJack\obj\Debug\BlackJack.pdb
