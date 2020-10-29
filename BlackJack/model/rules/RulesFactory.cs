@@ -22,7 +22,7 @@ namespace BlackJack.model.rules
         }
         public IWinStrategy equalRule()
         {
-            return new EqualRuleNormal();
+            return new EqualRulePlayer();
         }
     }
 }
