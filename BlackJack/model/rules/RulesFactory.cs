@@ -7,6 +7,11 @@ namespace BlackJack.model.rules
 {
     class RulesFactory
     {
+        public IHitStrategy GetHitRule()
+        {
+            return new BasicHitStrategy();
+        }
+
         public IHitStrategy softRule() {
             return new softRule();
         }
@@ -14,6 +19,10 @@ namespace BlackJack.model.rules
         public INewGameStrategy GetNewGameRule()
         {
             return new AmericanNewGameStrategy();
+        }
+        public IWinStrategy equalRule()
+        {
+            return new EqualRuleNormal();
         }
     }
 }
