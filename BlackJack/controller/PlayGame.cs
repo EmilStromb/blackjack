@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
+using BlackJack.model;
+
 
 namespace BlackJack.controller
 {
-    class PlayGame
+    class PlayGame : model.Observer
     {
         private model.Game game;
         private view.IView view;
@@ -16,7 +19,7 @@ namespace BlackJack.controller
             game = a_game;
 
             view.DisplayWelcomeMessage();
-            
+
             view.DisplayDealerHand(game.GetDealerHand(), game.GetDealerScore());
             view.DisplayPlayerHand(game.GetPlayerHand(), game.GetPlayerScore());
 
@@ -29,7 +32,7 @@ namespace BlackJack.controller
 
             if (input == 'p')
             {
-                game.NewGame();
+                game.NewGame(this);
             }
             else if (input == 'h')
             {
@@ -41,6 +44,14 @@ namespace BlackJack.controller
             }
 
             return input != 'q';
+        }
+        public void observ()
+        {
+            Thread.Sleep(500);
+            view.DisplayWelcomeMessage();
+            view.DisplayDealerHand(game.GetDealerHand(), game.GetDealerScore());
+            view.DisplayPlayerHand(game.GetPlayerHand(), game.GetPlayerScore());
+            Thread.Sleep(500);
         }
     }
 }

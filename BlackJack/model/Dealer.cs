@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BlackJack.controller;
 
 namespace BlackJack.model
 {
@@ -13,9 +14,6 @@ namespace BlackJack.model
         private rules.INewGameStrategy m_newGameRule;
         private rules.IHitStrategy m_softRule;
         private rules.IWinStrategy m_equalRule;
-
-
-
 
         public Dealer(rules.RulesFactory a_rulesFactory)
         {
@@ -83,6 +81,7 @@ namespace BlackJack.model
 		Card card = m_deck.GetCard();
 		card.Show(show);
 		a_player.DealCard(card);
-	    }
+        m_observer.observ();
+        }
     }
 }

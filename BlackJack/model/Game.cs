@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlackJack.controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,8 +27,10 @@ namespace BlackJack.model
             return m_dealer.IsDealerWinner(m_player);
         }
 
-        public bool NewGame()
+        public bool NewGame(Observer obs)
         {
+            m_player.AddObserver(obs);
+            m_dealer.AddObserver(obs);
             return m_dealer.NewGame(m_player);
         }
 
