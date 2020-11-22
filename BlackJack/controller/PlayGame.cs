@@ -10,47 +10,47 @@ namespace BlackJack.controller
 {
     class PlayGame : model.Observer
     {
-        private model.Game game;
-        private view.IView view;
+        private model.Game m_game;
+        private view.IView m_view;
 
         public bool Play(model.Game a_game, view.IView a_view)
         {
-            view = a_view;
-            game = a_game;
+            m_view = a_view;
+            m_game = a_game;
 
-            view.DisplayWelcomeMessage();
+            m_view.DisplayWelcomeMessage();
 
-            view.DisplayDealerHand(game.GetDealerHand(), game.GetDealerScore());
-            view.DisplayPlayerHand(game.GetPlayerHand(), game.GetPlayerScore());
+            m_view.DisplayDealerHand(m_game.GetDealerHand(), m_game.GetDealerScore());
+            m_view.DisplayPlayerHand(m_game.GetPlayerHand(), m_game.GetPlayerScore());
 
-            if (game.IsGameOver())
+            if (m_game.IsGameOver())
             {
-                view.DisplayGameOver(game.IsDealerWinner());
+                m_view.DisplayGameOver(m_game.IsDealerWinner());
             }
 
-            int input = view.GetInput();
+            view.MenuEnums input = m_view.GetInput();
 
-            if (input == 'p')
+            if (view.MenuEnums.PLAY.Equals(input))
             {
-                game.NewGame(this);
+                m_game.NewGame(this);
             }
-            else if (input == 'h')
+            else if (view.MenuEnums.HIT.Equals(input))
             {
-                game.Hit();
+                m_game.Hit();
             }
-            else if (input == 's')
+            else if (view.MenuEnums.STAND.Equals(input))
             {
-                game.Stand();
+                m_game.Stand();
             }
 
-            return input != 'q';
+            return !view.MenuEnums.QUIT.Equals(input);
         }
         public void observ()
         {
             Thread.Sleep(500);
-            view.DisplayWelcomeMessage();
-            view.DisplayDealerHand(game.GetDealerHand(), game.GetDealerScore());
-            view.DisplayPlayerHand(game.GetPlayerHand(), game.GetPlayerScore());
+            m_view.DisplayWelcomeMessage();
+            m_view.DisplayDealerHand(m_game.GetDealerHand(), m_game.GetDealerScore());
+            m_view.DisplayPlayerHand(m_game.GetPlayerHand(), m_game.GetPlayerScore());
             Thread.Sleep(500);
         }
     }
